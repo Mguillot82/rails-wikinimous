@@ -1,0 +1,10 @@
+<%= link_to 'back to reality? Maybe?', "/" %>
+
+<h2><%= @article.title%></h2>
+<p><%= @article.content%></p>
+
+<%= link_to 'Edit an article brother', "#{@article.id}/edit" %>
+<%= link_to "Delete",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

@@ -1,0 +1,14 @@
+
+  <nav class="navbar bg-body-tertiary bg-light ">
+    <h1 class="navbar-text text-black-50"> Wikinimous</h1>
+  </nav>
+    <ul class="list-group">
+      <%@articles.each do |article|%>
+      <li class="list-group-item ">
+        <div class="fw-bold"><%= link_to "#{article['title']}", "articles/#{article['id']}"%></div>
+        <div class="article-content"> <%= article['content']%></div>
+      </li>
+      <% end %>
+    </ul>
+
+    <%= link_to 'Create an article brother', 'articles/new' %>
